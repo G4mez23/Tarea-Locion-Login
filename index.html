@@ -32,6 +32,7 @@
             font-size: 18px;
             border-radius: 5px;
             margin-top: 20px;
+            cursor: pointer;
         }
         .buy-button:hover {
             background-color: darkred;
@@ -41,7 +42,18 @@
             font-size: 18px;
             margin-top: 10px;
         }
+        #phone-message {
+            display: none;
+            font-size: 20px;
+            color: yellow;
+            margin-top: 20px;
+        }
     </style>
+    <script>
+        function showPhoneNumber() {
+            document.getElementById('phone-message').style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -54,7 +66,8 @@
             <p>Diseño exclusivo en rojo y negro</p>
             <p>Edición limitada</p>
         </div>
-        <a href="#" class="buy-button">Comprar Ahora</a>
+        <button class="buy-button" onclick="showPhoneNumber()">Comprar Ahora</button>
+        <p id="phone-message">Llámanos al: 502 3272 3708</p>
     </div>
 </body>
 </html>
